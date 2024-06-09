@@ -1,0 +1,189 @@
+:root {
+    --primary-color: #edd9b0be;
+    --secondary-color: #bf7200;
+    --text-color: #000000;
+    --hover-scale: 1.05;
+    --hover-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --font-family: 'Roboto', sans-serif;
+    --transition-time: 0.3s;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e8d38ff9;
+    background: linear-gradient(rgb(233, 213, 141), rgb(255, 253, 253)), url('images/dogbody.png') no-repeat center center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    border-radius: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  transition: transform var(--transition-time) ease, box-shadow var(--transition-time) ease;
+    background: linear-gradient(rgb(255, 251, 236), rgb(255, 253, 253)), url('images/umay.jpg') no-repeat center center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    border-radius: 10px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color var(--transition-time) ease;
+}
+
+header nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+header .logo {
+    width: 50px;
+    height: auto;
+}
+
+.hero {
+    background: url('images/listadopt.jpeg') no-repeat center center/cover;
+    color: var(--text-color);
+    text-align: center;
+    padding: 300px 0;
+    font-size: 40px;
+    text-shadow: 2px 2px rgb(255, 251, 236);
+}
+
+.about, .team, .pets, .contact {
+    padding: 0px 0;
+}
+
+.about h2, .team h2, .pets h2, .contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about p, .team p, .pets p, .contact p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.team-members, .pet-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member, .pet {
+    text-align: center;
+    max-width: 200px;
+    margin: 10px;
+    padding: 10px;
+    transition: transform var(--transition-time) ease, box-shadow var(--transition-time) ease;
+    background: linear-gradient(rgba(227, 188, 97, 0.7), rgba(252, 252, 252, 0.897)), url('images/') no-repeat center center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    border-radius: 10px;
+}
+
+.team-member:hover, .pet:hover {
+    transform: scale(var(--hover-scale));
+    box-shadow: var(--hover-shadow);
+}
+
+.team-member img, .pet img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform var(--transition-time) ease;
+    max-block-size: 300px;
+}
+
+.team-member img:hover, .pet img:hover {
+    transform: scale(1.1);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #efd8ab;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    padding: 10px 20px;.pet {
+    background-size: contain; /* or background-size: 100% 100%; */
+}
+    font-size: 1em;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color var(--transition-time) ease;
+}
+
+.contact-form button:hover {
+    background-color: darken(var(--secondary-color), 10%);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
